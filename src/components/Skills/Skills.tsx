@@ -1,49 +1,8 @@
 'use client';
 
+import { portfolioData } from '@/data/portfolio';
 import styles from './Skills.module.css';
 
-const skillCategories = [
-  {
-    title: 'Languages',
-    icon: '💻',
-    skills: ['C', 'C++', 'Java', 'Python', 'Bash Scripting'],
-  },
-  {
-    title: 'Web Development',
-    icon: '🌐',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express.js'],
-  },
-  {
-    title: 'DevOps',
-    icon: '⚙️',
-    skills: ['Git', 'GitHub', 'Docker', 'Jenkins', 'CI/CD', 'Jira'],
-  },
-  {
-    title: 'Automation Tools',
-    icon: '🤖',
-    skills: ['Ansible', 'Chef', 'Puppet'],
-  },
-  {
-    title: 'Cloud Technologies',
-    icon: '☁️',
-    skills: ['AWS', 'Firebase', 'Vercel', 'Netlify', 'Cloudinary'],
-  },
-  {
-    title: 'Databases',
-    icon: '🗄️',
-    skills: ['MySQL', 'MongoDB', 'Firestore'],
-  },
-  {
-    title: 'Operating Systems',
-    icon: '🖥️',
-    skills: ['Ubuntu', 'Windows', 'CentOS'],
-  },
-  {
-    title: 'Security Tools',
-    icon: '🔒',
-    skills: ['Wireshark', 'Nmap', 'Hashing', 'Firewalls', 'IDS'],
-  },
-];
 
 export default function Skills() {
   return (
@@ -54,8 +13,8 @@ export default function Skills() {
         </h2>
 
         <div className={styles.grid}>
-          {skillCategories.map((category) => (
-            <div key={category.title} className={`card ${styles.categoryCard}`}>
+          {portfolioData.skillCategories.map((category) => (
+            <div key={category.id} className={`card ${styles.categoryCard}`}>
               <div className={styles.categoryHeader}>
                 <span className={styles.categoryIcon}>{category.icon}</span>
                 <h3 className={styles.categoryTitle}>{category.title}</h3>

@@ -1,19 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
-  const [mounted, setMounted] = useState(false);
+  // true on the client, false during SSR — avoids a theme-icon hydration mismatch
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
   const { theme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

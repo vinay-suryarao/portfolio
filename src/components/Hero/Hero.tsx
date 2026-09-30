@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/data/portfolio';
+import { isExternal, toDownloadUrl, toImageUrl } from '@/lib/media';
 import { Download } from 'lucide-react';
 import styles from './Hero.module.css';
 
@@ -12,24 +13,20 @@ const useTypewriter = (words: string[], typingSpeed = 100, deletingSpeed = 50, p
   const [loopNum, setLoopNum] = useState(0);
 
   useEffect(() => {
+    const currentWord = words[loopNum % words.length] ?? '';
     let timer: NodeJS.Timeout;
-    const currentWord = words[loopNum % words.length];
-
-    if (isDeleting) {
-      timer = setTimeout(() => {
-        setText(currentWord.substring(0, text.length - 1));
-      }, deletingSpeed);
-    } else {
-      timer = setTimeout(() => {
-        setText(currentWord.substring(0, text.length + 1));
-      }, typingSpeed);
-    }
 
     if (!isDeleting && text === currentWord) {
       timer = setTimeout(() => setIsDeleting(true), pauseTime);
     } else if (isDeleting && text === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
+      timer = setTimeout(() => {
+        setIsDeleting(false);
+        setLoopNum((n) => n + 1);
+      }, typingSpeed);
+    } else {
+      timer = setTimeout(() => {
+        setText(currentWord.substring(0, text.length + (isDeleting ? -1 : 1)));
+      }, isDeleting ? deletingSpeed : typingSpeed);
     }
 
     return () => clearTimeout(timer);
@@ -39,12 +36,10 @@ const useTypewriter = (words: string[], typingSpeed = 100, deletingSpeed = 50, p
 };
 
 export default function Hero() {
-  const typingText = useTypewriter([
-    'Web Developer',
-    'DevOps Enthusiast',
-    'IT Professional',
-    'Cloud Explorer'
-  ]);
+  const { personal } = portfolioData;
+  const typingText = useTypewriter(personal.typingWords);
+  const resumeUrl = toDownloadUrl(personal.resumeUrl);
+  const avatarUrl = toImageUrl(personal.avatar);
 
   return (
     <section className={styles.hero} id="hero">
@@ -64,9 +59,10 @@ export default function Hero() {
 
           <div className={styles.actions}>
             <a
-              href={portfolioData.personal.resumeUrl}
+              href={resumeUrl}
               className={styles.primaryBtn}
               download
+              {...(isExternal(resumeUrl) && { target: '_blank', rel: 'noopener noreferrer' })}
             >
               <Download size={20} />
               Download CV
@@ -103,8 +99,9 @@ export default function Hero() {
 
             <div className={styles.photoWrapper}>
               <Image
-                src="/images/vinay.png"
-                alt="Vinay Suryarao"
+                src={avatarUrl}
+                alt={personal.name}
+                unoptimized={isExternal(avatarUrl)}
                 fill
                 style={{ objectFit: 'cover' }}
                 className={styles.photo}

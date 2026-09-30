@@ -38,6 +38,7 @@
 }
 
 .projectCard {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: 1.75rem;
@@ -111,4 +112,22 @@
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: -1.75rem -1.75rem 1.5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-tertiary);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.projectCard:hover .image {
+  transform: scale(1.04);
 }

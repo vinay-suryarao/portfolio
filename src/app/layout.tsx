@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { portfolioData } from "@/data/portfolio";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,12 +21,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const { seo, personal } = portfolioData;
+
 export const metadata: Metadata = {
-  title: "Vinay Suryarao | IT Professional & Web Developer",
-  description:
-    "Portfolio of Vinay Suryarao — IT Professional, DevOps enthusiast, and Web Developer. Skilled in React, Next.js, Node.js, Docker, AWS, and Red Hat OpenShift.",
+  title: seo.title,
+  description: seo.description,
   keywords: [
-    "Vinay Suryarao",
+    personal.name,
     "Web Developer",
     "DevOps",
     "Portfolio",
@@ -34,21 +36,19 @@ export const metadata: Metadata = {
     "Full Stack Developer",
     "IT Professional",
   ],
-  authors: [{ name: "Vinay Suryarao" }],
+  authors: [{ name: personal.name }],
   openGraph: {
-    title: "Vinay Suryarao | IT Professional & Web Developer",
-    description:
-      "Portfolio of Vinay Suryarao — IT Professional, DevOps enthusiast, and Web Developer.",
-    url: "https://suryarao.dev",
-    siteName: "Vinay Suryarao Portfolio",
+    title: seo.title,
+    description: seo.description,
+    url: seo.siteUrl,
+    siteName: `${personal.name} Portfolio`,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vinay Suryarao | IT Professional & Web Developer",
-    description:
-      "Portfolio of Vinay Suryarao — IT Professional, DevOps enthusiast, and Web Developer.",
+    title: seo.title,
+    description: seo.description,
   },
   robots: {
     index: true,

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { portfolioData } from '@/data/portfolio';
 import { ExternalLink, FolderGit2 } from 'lucide-react';
+import { isExternal, toImageUrl } from '@/lib/media';
 import styles from './Projects.module.css';
 
 export default function Projects() {
@@ -40,6 +42,22 @@ export default function Projects() {
         <div className={styles.grid}>
           {filteredProjects.map((project) => (
             <div key={project.id} className={`card ${styles.projectCard}`}>
+              {project.image && (
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src={toImageUrl(project.image)}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 480px) 100vw, 400px"
+                    unoptimized={isExternal(project.image)}
+                    className={styles.image}
+                    // Hide the banner instead of showing a broken image
+                    onError={(e) => {
+                      (e.currentTarget.parentElement as HTMLElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
               <div className={styles.cardTop}>
                 <div className={styles.folderIcon}>
                   <FolderGit2 size={28} />

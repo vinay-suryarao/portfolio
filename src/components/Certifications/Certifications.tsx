@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { portfolioData } from '@/data/portfolio';
-import { Award, BadgeCheck } from 'lucide-react';
+import { Award, BadgeCheck, ExternalLink } from 'lucide-react';
+import { toViewUrl } from '@/lib/media';
 import styles from './Certifications.module.css';
 
 export default function Certifications() {
@@ -39,6 +40,11 @@ export default function Certifications() {
                 <div className={styles.iconWrapper}>{cert.icon}</div>
                 <h3 className={styles.title}>{cert.title}</h3>
                 <p className={styles.issuer}>{cert.issuer}</p>
+                {cert.file && (
+                  <a href={toViewUrl(cert.file)} target="_blank" rel="noopener noreferrer" className={styles.viewLink}>
+                    View Certificate <ExternalLink size={14} />
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -51,6 +57,11 @@ export default function Certifications() {
                 <div className={styles.iconWrapper}>{award.icon}</div>
                 <h3 className={styles.title}>{award.title}</h3>
                 <p className={styles.issuer}>{award.organization}</p>
+                {award.file && (
+                  <a href={toViewUrl(award.file)} target="_blank" rel="noopener noreferrer" className={styles.viewLink}>
+                    View <ExternalLink size={14} />
+                  </a>
+                )}
               </div>
             ))}
           </div>

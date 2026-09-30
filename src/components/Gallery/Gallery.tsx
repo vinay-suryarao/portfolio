@@ -2,18 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { portfolioData } from '@/data/portfolio';
+import { isExternal, toImageUrl } from '@/lib/media';
 import styles from './Gallery.module.css';
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const galleryItems = [
-    { id: 1, src: '/images/1760677675578.jpg', alt: 'Vinay at tech event' },
-    { id: 2, src: '/images/1760677675760.jpg', alt: 'Workshop session' },
-    { id: 3, src: '/images/1771490399127.jpg', alt: 'Team collaboration' },
-    { id: 4, src: '/images/1771493034650.jpg', alt: 'DevOps club meetup' },
-    { id: 5, src: '/images/1771493034952.jpg', alt: 'Technical presentation' },
-  ];
+  const galleryItems = portfolioData.gallery.map((item) => ({ ...item, src: toImageUrl(item.src) }));
 
   return (
     <section className={`section ${styles.gallery}`} id="gallery">
@@ -33,6 +29,7 @@ export default function Gallery() {
                 <Image
                   src={item.src}
                   alt={item.alt}
+                  unoptimized={isExternal(item.src)}
                   fill
                   style={{ objectFit: 'cover' }}
                   className={styles.image}
@@ -56,6 +53,7 @@ export default function Gallery() {
             <Image
               src={selectedImage}
               alt="Gallery image"
+              unoptimized={isExternal(selectedImage)}
               width={900}
               height={600}
               style={{ objectFit: 'contain', width: '100%', height: 'auto', maxHeight: '85vh' }}

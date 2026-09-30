@@ -42,7 +42,7 @@ export default function About() {
                   <Briefcase size={18} className={styles.detailIcon} />
                   <div>
                     <span className={styles.detailLabel}>Role</span>
-                    <span className={styles.detailValue}>IT Professional</span>
+                    <span className={styles.detailValue}>{portfolioData.personal.role}</span>
                   </div>
                 </div>
                 
