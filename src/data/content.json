@@ -323,6 +323,13 @@
   ],
   "certifications": [
     {
+      "title": "AWS Academy Graduate - Cloud Architecting",
+      "issuer": "Amazon Web Services (AWS)",
+      "icon": "📜",
+      "file": "https://drive.google.com/file/d/1M6eA1Cp15GMaLWJiOjoPXE4-Rak0ECmt/view?usp=sharing",
+      "id": 9
+    },
+    {
       "id": 1,
       "title": "AWS Cloud Foundation",
       "issuer": "Amazon Web Services (AWS)",
@@ -330,53 +337,53 @@
       "file": "https://drive.google.com/file/d/1zvdi8pJIS67aOB5igfvDBaeAtP-ZO_DK/view?usp=sharing"
     },
     {
-      "id": 2,
-      "title": "Python Full Stack Developer Virtual Internship",
-      "issuer": "EduSkills Foundation",
-      "icon": "🐍",
-      "file": ""
-    },
-    {
-      "id": 3,
-      "title": "Full Stack Web Development Certification",
-      "issuer": "Certification Authority",
-      "icon": "💻",
-      "file": ""
-    },
-    {
-      "id": 4,
-      "title": "Android Application Development Certification",
-      "issuer": "Certification Authority",
-      "icon": "📱",
-      "file": ""
-    },
-    {
-      "id": 5,
-      "title": "IoT Cloud Engineer Virtual Internship",
-      "issuer": "EduSkills Foundation",
-      "icon": "🌩️",
-      "file": ""
+      "id": 8,
+      "title": "RedHat OpenShift Administration",
+      "issuer": "Red Hat",
+      "icon": "🎩",
+      "file": "https://drive.google.com/file/d/1HSyNqNu6hd5Cr5XzhPKEwnXwNM5u4WbB/"
     },
     {
       "id": 6,
       "title": "IBM Web Development Fundamentals",
       "issuer": "IBM",
       "icon": "🌐",
-      "file": ""
+      "file": "https://drive.google.com/file/d/1_SKRoVaLmFzY8uJRZ6qHEKFBmc3GIfql/"
     },
     {
       "id": 7,
       "title": "CCNA Introduction to Networks",
       "issuer": "Cisco Networking Academy",
       "icon": "🔗",
-      "file": ""
+      "file": "https://drive.google.com/file/d/11mENje-H6SVBwBWc1l9o-F8AuKFgDChO/"
     },
     {
-      "id": 8,
-      "title": "RedHat OpenShift Administration",
-      "issuer": "Red Hat",
-      "icon": "🎩",
-      "file": ""
+      "id": 2,
+      "title": "Python Full Stack Developer Virtual Internship",
+      "issuer": "EduSkills Foundation",
+      "icon": "🐍",
+      "file": "https://drive.google.com/file/d/1fkg7QFQj9UYLt3k5pY-ejkAnbuGE4uDJ/"
+    },
+    {
+      "id": 3,
+      "title": "Full Stack Web Development Certification",
+      "issuer": "Certification Authority",
+      "icon": "💻",
+      "file": "https://drive.google.com/file/d/1scLnhj3lq_jz_M2kz0QH47jgBiF8XtXX/view?usp=sharing"
+    },
+    {
+      "id": 4,
+      "title": "Android Application Development Certification",
+      "issuer": "Certification Authority",
+      "icon": "📱",
+      "file": "https://drive.google.com/file/d/1mBAR22oamSqUm7zKVsfQbOe57vrTt1sB/view?usp=sharing"
+    },
+    {
+      "id": 5,
+      "title": "IoT Cloud Engineer Virtual Internship",
+      "issuer": "EduSkills Foundation",
+      "icon": "🌩️",
+      "file": "https://drive.google.com/file/d/16kl9Y_BmbctKiiSxooFJKOYGUvHHzBLV/"
     }
   ],
   "awards": [
@@ -399,7 +406,7 @@
       "title": "Winner — Sparkathon",
       "organization": "APSIT, Thane",
       "icon": "🏆",
-      "file": ""
+      "file": "https://drive.google.com/file/d/1NMcFdblPkYjdBgDKy4UvPPEUYaa-Zy0y/view?usp=sharing"
     },
     {
       "id": 3,
