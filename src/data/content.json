@@ -50,6 +50,19 @@
   ],
   "skillCategories": [
     {
+      "title": "Data Science & Analytics",
+      "icon": "⭐",
+      "skills": [
+        "Power BI",
+        "Weka",
+        "RapidMiner",
+        "Pandas",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "id": 9
+    },
+    {
       "id": 1,
       "title": "Languages",
       "icon": "💻",
@@ -144,27 +157,43 @@
   ],
   "experience": [
     {
+      "role": "Web Infrastructure & Analytics Developer",
+      "company": "DURA POINT PVT. LTD.",
+      "duration": "March 2026 – September 2026",
+      "type": "work",
+      "description": "Designed, developed, and managed the company’s complete web infrastructure, including business websites, domains,\nhosting, deployment, and ongoing maintenance. Developed and managed e-warranty systems with QR-based verification, customer registration, warranty tracking, and automated data management. Implemented web analytics and customer acquisition strategies to analyze website performance, user engagement,\nand generate potential clients through digital channels. Managed website integrations, hosting configurations, domain services, and third-party tools to ensure reliable and continuous web operations.\n",
+      "id": 4
+    },
+    {
       "id": 1,
       "role": "Full Stack Web Developer Intern",
       "company": "NexiaQuest Ventures LLP",
-      "duration": "April 2025 – Present",
+      "duration": "April 2025 – August 2025",
       "description": "Engineered and launched the official company website from scratch using the MERN stack. Designed responsive, high-performance UI with React, Vite, and Tailwind CSS. Architected and deployed CI/CD pipeline on AWS. Containerized applications with Docker and led project execution using Agile methodologies with Jira.",
       "type": "work"
     },
     {
-      "id": 2,
-      "role": "Technical Head",
-      "company": "DevOps Club — APSIT",
-      "duration": "July 2025 – Present",
-      "description": "Spearhead the technical vision of the club, guiding a team through project development and structured learning paths. Architect and deliver hands-on workshops on Docker, Jenkins, and Git. Lead bootcamps with curriculum design and mentor members on advanced DevOps concepts and best practices.",
-      "type": "position"
+      "role": "President ",
+      "company": "DevOps Club APSIT",
+      "duration": "August 2026 – Present",
+      "type": "position",
+      "description": "Lead the overall vision, planning, and execution of the DevOps Club, coordinating technical initiatives, events,\nworkshops, and collaborative projects. Guide club members in developing practical skills across DevOps, Cloud Computing, CI/CD, Docker, Jenkins, and Git. Organize technical workshops, bootcamps, and project-based learning activities to promote hands-on learning and industry-oriented skills. Coordinate with faculty, students, and technical teams to drive club activities and foster a collaborative technical community.",
+      "id": 5
     },
     {
       "id": 3,
       "role": "Red Hat Student Ambassador",
       "company": "A.P. Shah Institute of Technology",
-      "duration": "2025 – Present",
+      "duration": "July 2025 – Aug 2026",
       "description": "Promoting open-source technologies and Red Hat solutions within the campus community. Organizing events and workshops around Linux, containers, and cloud-native technologies.",
+      "type": "position"
+    },
+    {
+      "id": 2,
+      "role": "Technical Head",
+      "company": "DevOps Club — APSIT",
+      "duration": "July 2025 – August 2026",
+      "description": "Spearhead the technical vision of the club, guiding a team through project development and structured learning paths. Architect and deliver hands-on workshops on Docker, Jenkins, and Git. Lead bootcamps with curriculum design and mentor members on advanced DevOps concepts and best practices.",
       "type": "position"
     }
   ],
@@ -352,6 +381,13 @@
   ],
   "awards": [
     {
+      "title": "Runner-Up -- TechForge Hackathon",
+      "organization": "APSIT, Thane.",
+      "icon": "🎖️",
+      "file": "https://drive.google.com/file/d/1VOKMhDIlKkVGP3JXtpzuWEztOA5sh2-m/view?usp=sharing",
+      "id": 5
+    },
+    {
       "id": 1,
       "title": "Winner — Proto-IT Webinar Series",
       "organization": "VESIT, Chembur",
@@ -381,6 +417,16 @@
     }
   ],
   "gallery": [
+    {
+      "src": "https://drive.google.com/file/d/1VOKMhDIlKkVGP3JXtpzuWEztOA5sh2-m/view?usp=sharing",
+      "alt": "TechForge Hackathon",
+      "id": 7
+    },
+    {
+      "src": "https://drive.google.com/file/d/1Ut2lD9--p31MUClM7DlENeDCgERHQ3XL/view?usp=sharing",
+      "alt": "Runner-Up TechForge",
+      "id": 6
+    },
     {
       "id": 1,
       "src": "/images/1760677675578.jpg",
